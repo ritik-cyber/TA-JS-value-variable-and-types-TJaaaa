@@ -15,4 +15,12 @@ var bank_balance = 303.91;
 var amount = 0;
 // your code goes here
 
+let total_phone = PHONE_PRICE + ACCESSORY_PRICE;
+let total_tax = (total_phone * 0.08) / 100;
+let total_price = " ";
+for (var i = 0; i < total_phone; i++) {
+  console.log(total_phone);
+}
+console.log("total tax", total_tax);
+
 // ⛑ Answer of the above will `$334.76`.
