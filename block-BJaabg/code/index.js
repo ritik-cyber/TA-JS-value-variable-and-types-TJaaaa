@@ -15,12 +15,22 @@ var bank_balance = 303.91;
 var amount = 0;
 // your code goes here
 
-let total_phone = PHONE_PRICE + ACCESSORY_PRICE;
-let total_tax = (total_phone * 0.08) / 100;
-let total_price = " ";
-for (var i = 0; i < total_phone; i++) {
-  console.log(total_phone);
+while (amount < bank_balance) {
+  amount += PHONE_PRICE;
+  if (amount < SPENDING_THRESHOLD) {
+    amount += ACCESSORY_PRICE;
+  }
 }
-console.log("total tax", total_tax);
+let tax = amount * TAX_RATE;
+
+let tax_amount = tax + amount;
+
+console.log(`$${tax_amount}`);
+
+if (tax_amount < bank_balance) {
+  console.log("you can afford it");
+} else {
+  console.log("you can't afford it");
+}
 
 // ⛑ Answer of the above will `$334.76`.
